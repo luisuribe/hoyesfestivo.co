@@ -7,7 +7,7 @@ $row     = $results->fetchArray();
 $holiday_date = new DateTime($row['holiday_date']);
 
 if ( $now->format('Y-m-d') == $holiday_date->format('Y-m-d') ) {
-    copy('../templates/holiday.html', '../index.html');
+    copy('../templates/holiday.html', '../www/index.html');
 } else {
     $difference = $now->diff($holiday_date);
 
@@ -17,7 +17,7 @@ if ( $now->format('Y-m-d') == $holiday_date->format('Y-m-d') ) {
 
     $template = file_get_contents('../templates/not_holiday.html');
     $new_file = preg_replace('/NOTE/', $note , $template);
-    $fp       = fopen('../index.html', 'w+');
+    $fp       = fopen('../www/index.html', 'w+');
     fwrite($fp, $new_file);
     fclose($fp);
 }

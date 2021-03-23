@@ -24,3 +24,23 @@ insert into holidays(holiday_date, holiday_name) values ('2014-11-03', 'Día de 
 insert into holidays(holiday_date, holiday_name) values ('2014-11-17', 'Independencia de Cartagena');
 insert into holidays(holiday_date, holiday_name) values ('2014-12-08', 'Día de la Inmaculada Concepción');
 insert into holidays(holiday_date, holiday_name) values ('2014-12-25', 'Navidad');
+
+insert into holidays(holiday_date, holiday_name) values ('2021-01-01', 'Año Nuevo');
+insert into holidays(holiday_date, holiday_name) values ('2021-01-11', 'Día de los Reyes Magos');
+insert into holidays(holiday_date, holiday_name) values ('2021-03-22', 'Día de San José');
+insert into holidays(holiday_date, holiday_name) values ('2021-04-01', 'Jueves Santo (Semana Santa)');
+insert into holidays(holiday_date, holiday_name) values ('2021-04-02', 'Viernes Santo (Semana Santa)');
+insert into holidays(holiday_date, holiday_name) values ('2021-05-01', 'Día del Trabajo');
+insert into holidays(holiday_date, holiday_name) values ('2021-05-17', 'Día de la Ascencion');
+insert into holidays(holiday_date, holiday_name) values ('2021-06-07', 'Corpus Christi');
+insert into holidays(holiday_date, holiday_name) values ('2021-06-14', 'Sagrado Corazón');
+
+insert into holidays(holiday_date, holiday_name) values ('2021-07-05', 'San Pedro y San Pablo');
+insert into holidays(holiday_date, holiday_name) values ('2021-07-20', 'Día de la Independencia');
+insert into holidays(holiday_date, holiday_name) values ('2021-08-07', 'Batalla de Boyaca');
+insert into holidays(holiday_date, holiday_name) values ('2021-08-16', 'Día de la Ascensión');
+insert into holidays(holiday_date, holiday_name) values ('2021-10-18', 'Día de la raza');
+insert into holidays(holiday_date, holiday_name) values ('2021-11-01', 'Día de Todos los Santos');
+insert into holidays(holiday_date, holiday_name) values ('2021-11-15', 'Independencia de Cartagena');
+insert into holidays(holiday_date, holiday_name) values ('2021-12-08', 'Día de la Inmaculada Concepción');
+insert into holidays(holiday_date, holiday_name) values ('2021-12-25', 'Navidad');
