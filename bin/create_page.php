@@ -89,8 +89,8 @@ function getDayNumber($date){
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" href="#">home</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/api">api</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/">home</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/api.html">api</a>
       </nav>
     </div>
 
@@ -152,8 +152,8 @@ function getDayNumber($date){
           </div>
           <div class="card-body">
             <div class="calendar-wrapper">
-              <button id="btnPrev" type="button">Atr&acute;s</button>
-              <button id="btnNext" type="button">Adelante</button>
+              <button id="btnPrev" type="button">Anterior</button>
+              <button id="btnNext" type="button">Siguiente</button>
               <div id="divCal"></div>
             </div>
           </div>
@@ -171,7 +171,7 @@ function getDayNumber($date){
       <div class="col-6 col-md">
         <h5>Stuff</h5>
         <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/api">API</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="/api.html">API</a></li>
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://github.com/luisuribe/hoyesfestivo.co/issues" target="new">Issues / bugs</a></li>
         </ul>
       </div>
