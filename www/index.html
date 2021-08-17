@@ -1,47 +1,3 @@
-<?php 
-$db      = new SQLite3('./holidays');
-$now     = new DateTime(date('Y-m-d'));
-$query   = "SELECT * FROM holidays WHERE holiday_date >= '".$now->format('Y-m-d')."'";
-$results = $db->query($query);
-
-
-function getDayName($date){
-  $days = [
-    'domingo',
-    'lunes',
-    'martes',
-    'mi&eacute;rcoles',
-    'jueves',
-    'viernes',
-    's&aacute;bado',
-    'domingo'
-  ]; 
-  return $days[date('w', $date)];
-}
-
-function getMonthName($date){
-  $months = [
-    'enero',
-    'febrero',
-    'marzo',
-    'abril',
-    'mayo',
-    'junio',
-    'julio',
-    'agosto',
-    'septiembre',
-    'octubre',
-    'noviembre',
-    'diciembre'
-  ];
-  return $months[date('n', $date)-1];
-}
-
-function getDayNumber($date){
-  return date('j', $date);
-}
-
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -95,18 +51,9 @@ function getDayNumber($date){
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <?php 
-      $row = $results->fetchArray() ;
-      $holiday_date = new DateTime($row['holiday_date']);
-      if ( $now->format('Y-m-d') == $holiday_date->format('Y-m-d') ) {
-      ?>
-      <h1 class="display-4 fw-normal">SI!</h1>
+            <h1 class="display-4 fw-normal">SI!</h1>
       <p class="fs-5 text-muted">Hoy ES festivo en Colombia</p>
-      <?php } else { ?>
-      <h1 class="display-4 fw-normal">NO!</h1>
-      <p class="fs-5 text-muted">Hoy no es festivo en Colombia</p>
-      <?php } 
-      $results->reset() ?> 
+       
     </div>
   </header>
 
@@ -120,27 +67,67 @@ function getDayNumber($date){
           <div class="card-body">
             <table class="table table-striped">
               <tbody>
-                <?php while ($row = $results->fetchArray()) { 
-                $holiday_date = new DateTime($row['holiday_date']);
-                $difference = $now->diff($holiday_date);
-                ?>
-                <tr>
+                                <tr>
                   <td>
-                    <?php echo getMonthName(strtotime($row['holiday_date'])) ?>
-                    <?php echo getDayNumber(strtotime($row['holiday_date'])) ?>,&nbsp;
-                    <?php echo getDayName(strtotime($row['holiday_date'])) ?>
-                    <br>
-                    (<?php echo $row['holiday_name'] ?>)
+                    agosto                    16,&nbsp;
+                    lunes                    <br>
+                    (Día de la Ascensión)
                   </td>
                   <td>
-                    <?php if ($difference->days == 1) { ?> (es ma&ntilde;ana!)
-                    <?php } else { ?>
-                    (faltan <?php echo $difference->days ?> d&iacute;as)
-                    <?php } ?>
-                  </td>
+                                        (faltan 0 d&iacute;as)
+                                      </td>
                 </tr>
-                <?php } ?>
-              </tbody>
+                                <tr>
+                  <td>
+                    octubre                    18,&nbsp;
+                    lunes                    <br>
+                    (Día de la raza)
+                  </td>
+                  <td>
+                                        (faltan 63 d&iacute;as)
+                                      </td>
+                </tr>
+                                <tr>
+                  <td>
+                    noviembre                    1,&nbsp;
+                    lunes                    <br>
+                    (Día de Todos los Santos)
+                  </td>
+                  <td>
+                                        (faltan 77 d&iacute;as)
+                                      </td>
+                </tr>
+                                <tr>
+                  <td>
+                    noviembre                    15,&nbsp;
+                    lunes                    <br>
+                    (Independencia de Cartagena)
+                  </td>
+                  <td>
+                                        (faltan 91 d&iacute;as)
+                                      </td>
+                </tr>
+                                <tr>
+                  <td>
+                    diciembre                    8,&nbsp;
+                    mi&eacute;rcoles                    <br>
+                    (Día de la Inmaculada Concepción)
+                  </td>
+                  <td>
+                                        (faltan 114 d&iacute;as)
+                                      </td>
+                </tr>
+                                <tr>
+                  <td>
+                    diciembre                    25,&nbsp;
+                    s&aacute;bado                    <br>
+                    (Navidad)
+                  </td>
+                  <td>
+                                        (faltan 131 d&iacute;as)
+                                      </td>
+                </tr>
+                              </tbody>
             </table>          
           </div>
         </div>
@@ -172,7 +159,7 @@ function getDayNumber($date){
         <h5>Stuff</h5>
         <ul class="list-unstyled text-small">
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="/api">API</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://github.com/luisuribe/hoyesfestivo.co/issues" target="new">Issues / bugs</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://github.com/luisuribe/hoyesfestivo.co" target="new">Issues</a></li>
         </ul>
       </div>
     </div>
