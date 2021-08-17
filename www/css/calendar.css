@@ -67,6 +67,19 @@ td.calendar.today {
   color:rgb(40,40,59);
   font-size:1.5em;
 }
+
+td.calendar.sunday {
+  color:rgb(255,255,255);
+  background: #0d6efd;
+}
+
+td.calendar.holiday {
+  font-weight:700;
+  color:rgb(255,255,255);
+  font-size:1.5em;
+  background: rgb(2550,0,0);
+}
+
 thead td {
   border:none;
   color:rgb(40,40,59);

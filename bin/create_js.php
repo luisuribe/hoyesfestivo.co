@@ -1,3 +1,15 @@
+<?php 
+$db      = new SQLite3('./holidays');
+$now     = new DateTime(date('Y-m-d'));
+$query   = "SELECT * FROM holidays WHERE holiday_date LIKE '2021%'";
+$results = $db->query($query);
+
+while ($row = $results->fetchArray()) { 
+    $holiday = new DateTime($row['holiday_date']);
+    $holiday_dates[] = $holiday->format('Y-m-d');
+}
+
+?>
 var Cal = function(divId) {
 
   //Store div id
@@ -24,7 +36,7 @@ var Cal = function(divId) {
   this.currYear = d.getFullYear();
   this.currDay = d.getDate();
 
-  this.Holidays = ["2021-01-01","2021-01-11","2021-03-22","2021-04-01","2021-04-02","2021-05-01","2021-05-17","2021-06-07","2021-06-14","2021-07-05","2021-07-20","2021-08-07","2021-08-16","2021-10-18","2021-11-01","2021-11-15","2021-12-08","2021-12-25"];
+  this.Holidays = [<?php echo '"'.implode('","', $holiday_dates).'"' ?>];
 
 };
 
