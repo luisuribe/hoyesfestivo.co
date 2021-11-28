@@ -1,7 +1,7 @@
 <?php 
 $db      = new SQLite3('./holidays');
 $now     = new DateTime(date('Y-m-d'));
-$query   = "SELECT * FROM holidays WHERE holiday_date LIKE '2021%'";
+$query   = "SELECT * FROM holidays WHERE holiday_date LIKE '202%'";
 $results = $db->query($query);
 
 while ($row = $results->fetchArray()) { 
@@ -63,7 +63,11 @@ Cal.prototype.isAHoliday = function(year, month, day) {
 Cal.prototype.nextMonth = function() {
   if ( this.currMonth == 11 ) {
     this.currMonth = 0;
-    this.currYear = 2021;
+    if ( this.currYear == 2021 ) {
+      this.currYear = 2022;
+    } else {
+      this.currYear = 2021;
+    }
   }
   else {
     this.currMonth = this.currMonth + 1;
@@ -75,7 +79,11 @@ Cal.prototype.nextMonth = function() {
 Cal.prototype.previousMonth = function() {
   if ( this.currMonth == 0 ) {
     this.currMonth = 11;
-    this.currYear = 2021;
+    if ( this.currYear == 2021 ) {
+      this.currYear = 2022;
+    } else {
+      this.currYear = 2021;
+    }
   }
   else {
     this.currMonth = this.currMonth - 1;

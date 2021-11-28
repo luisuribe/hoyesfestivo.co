@@ -1,7 +1,7 @@
 <?php 
 $db      = new SQLite3('./holidays');
 $now     = new DateTime(date('Y-m-d'));
-$query   = "SELECT * FROM holidays WHERE holiday_date >= '".$now->format('Y-m-d')."'";
+$query   = "SELECT * FROM holidays WHERE holiday_date >= '".$now->format('Y-m-d')."' LIMIT 5";
 $results = $db->query($query);
 
 
@@ -148,7 +148,7 @@ function getDayNumber($date){
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Calendario de festivos (solo 2021)</h4>
+            <h4 class="my-0 fw-normal">Calendario de festivos (2021 y 2022</h4>
           </div>
           <div class="card-body">
             <div class="calendar-wrapper">

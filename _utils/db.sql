@@ -49,7 +49,7 @@ insert into holidays(holiday_date, holiday_name) values ('2021-12-25', 'Navidad'
 insert into holidays(holiday_date, holiday_name) values ('2022-01-01', 'Año Nuevo');
 insert into holidays(holiday_date, holiday_name) values ('2022-01-10', 'Día de los Reyes Magos');
 insert into holidays(holiday_date, holiday_name) values ('2022-03-21', 'Día de San José');
-insert into holidays(holiday_date, holiday_name) values ('2022-04-15', 'Jueves Santo (Semana Santa)');
+insert into holidays(holiday_date, holiday_name) values ('2022-04-14', 'Jueves Santo (Semana Santa)');
 insert into holidays(holiday_date, holiday_name) values ('2022-04-15', 'Viernes Santo (Semana Santa)');
 insert into holidays(holiday_date, holiday_name) values ('2022-05-01', 'Día del Trabajo');
 insert into holidays(holiday_date, holiday_name) values ('2022-05-30', 'Día de la Ascencion');
