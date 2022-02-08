@@ -150,7 +150,7 @@ function getDayNumber($date){
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Calendario de festivos (2021 y 20cd /home/hoyesfestivo/hoyesfestivo.co/bin ; php -f create_page.php > ../www/index.html ; php -f create_js.php > ../www/js/calendar.js22</h4>
+            <h4 class="my-0 fw-normal">Calendario de festivos (2021 y 2022</h4>
           </div>
           <div class="card-body">
             <div class="calendar-wrapper">
