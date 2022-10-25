@@ -65,6 +65,8 @@ Cal.prototype.nextMonth = function() {
     this.currMonth = 0;
     if ( this.currYear == 2022 ) {
       this.currYear = 2023;
+    } else {
+      this.currYear = 2022;
     }
   }
   else {
@@ -79,6 +81,8 @@ Cal.prototype.previousMonth = function() {
     this.currMonth = 11;
     if ( this.currYear == 2022 ) {
       this.currYear = 2023;
+    } else {
+      this.currYear = 2022;
     }
   }
   else {
