@@ -1,4 +1,4 @@
-<?php 
+<?php
 $db      = new SQLite3('./holidays');
 $now     = new DateTime(date('Y-m-d'));
 $query   = "SELECT * FROM holidays WHERE holiday_date >= '".$now->format('Y-m-d')."' LIMIT 5";
@@ -15,7 +15,7 @@ function getDayName($date){
     'viernes',
     's&aacute;bado',
     'domingo'
-  ]; 
+  ];
   return $days[date('w', $date)];
 }
 
@@ -54,9 +54,9 @@ function getDayNumber($date){
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/">
 
-    
+
     <!-- Bootstrap core CSS -->
-    
+
     <link href="css/calendar.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -82,7 +82,7 @@ function getDayNumber($date){
 
   </head>
   <body>
-    
+
 <div class="container py-3">
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -97,7 +97,7 @@ function getDayNumber($date){
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <?php 
+      <?php
       $row = $results->fetchArray() ;
       $holiday_date = new DateTime($row['holiday_date']);
       if ( $now->format('Y-m-d') == $holiday_date->format('Y-m-d') ) {
@@ -107,8 +107,8 @@ function getDayNumber($date){
       <?php } else { ?>
       <h1 class="display-4 fw-normal">NO!</h1>
       <p class="fs-5 text-muted">Hoy no es festivo en Colombia</p>
-      <?php } 
-      $results->reset() ?> 
+      <?php }
+      $results->reset() ?>
     </div>
   </header>
 
@@ -122,7 +122,7 @@ function getDayNumber($date){
           <div class="card-body">
             <table class="table table-striped">
               <tbody>
-                <?php while ($row = $results->fetchArray()) { 
+                <?php while ($row = $results->fetchArray()) {
                 $holiday_date = new DateTime($row['holiday_date']);
                 $difference = $now->diff($holiday_date);
                 ?>
@@ -143,14 +143,14 @@ function getDayNumber($date){
                 </tr>
                 <?php } ?>
               </tbody>
-            </table>          
+            </table>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Calendario de festivos (2021 y 2022</h4>
+            <h4 class="my-0 fw-normal">Calendario de festivos (2022 y 2023)</h4>
           </div>
           <div class="card-body">
             <div class="calendar-wrapper">
@@ -168,7 +168,7 @@ function getDayNumber($date){
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
       <div class="col-12 col-md">
-        <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+        <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
       </div>
       <div class="col-6 col-md">
         <h5>Stuff</h5>
@@ -182,6 +182,6 @@ function getDayNumber($date){
 </div>
 
 
-    
+
   </body>
 </html>

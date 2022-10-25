@@ -1,10 +1,10 @@
-<?php 
+<?php
 $db      = new SQLite3('./holidays');
 $now     = new DateTime(date('Y-m-d'));
 $query   = "SELECT * FROM holidays WHERE holiday_date LIKE '202%'";
 $results = $db->query($query);
 
-while ($row = $results->fetchArray()) { 
+while ($row = $results->fetchArray()) {
     $holiday = new DateTime($row['holiday_date']);
     $holiday_dates[] = $holiday->format('Y-m-d');
 }
@@ -63,10 +63,8 @@ Cal.prototype.isAHoliday = function(year, month, day) {
 Cal.prototype.nextMonth = function() {
   if ( this.currMonth == 11 ) {
     this.currMonth = 0;
-    if ( this.currYear == 2021 ) {
-      this.currYear = 2022;
-    } else {
-      this.currYear = 2021;
+    if ( this.currYear == 2022 ) {
+      this.currYear = 2023;
     }
   }
   else {
@@ -79,10 +77,8 @@ Cal.prototype.nextMonth = function() {
 Cal.prototype.previousMonth = function() {
   if ( this.currMonth == 0 ) {
     this.currMonth = 11;
-    if ( this.currYear == 2021 ) {
-      this.currYear = 2022;
-    } else {
-      this.currYear = 2021;
+    if ( this.currYear == 2022 ) {
+      this.currYear = 2023;
     }
   }
   else {
@@ -187,7 +183,7 @@ Cal.prototype.showMonth = function(y, m) {
 window.onload = function() {
 
   // Start calendar
-  var c = new Cal("divCal");            
+  var c = new Cal("divCal");
   c.showcurr();
 
   // Bind next and previous button clicks
