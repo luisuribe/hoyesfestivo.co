@@ -150,7 +150,7 @@ function getDayNumber($date){
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Calendario de festivos (2022 y 2023)</h4>
+            <h4 class="my-0 fw-normal">Calendario de festivos (2023 y 2024)</h4>
           </div>
           <div class="card-body">
             <div class="calendar-wrapper">
@@ -168,7 +168,7 @@ function getDayNumber($date){
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
       <div class="col-12 col-md">
-        <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
+        <small class="d-block mb-3 text-muted">&copy; 2017–2024</small>
       </div>
       <div class="col-6 col-md">
         <h5>Stuff</h5>

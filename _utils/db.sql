@@ -84,3 +84,23 @@ insert into holidays(holiday_date, holiday_name) values ('2023-11-06', 'Día de 
 insert into holidays(holiday_date, holiday_name) values ('2023-11-13', 'Independencia de Cartagena');
 insert into holidays(holiday_date, holiday_name) values ('2023-12-08', 'Día de la Inmaculada Concepción');
 insert into holidays(holiday_date, holiday_name) values ('2023-12-25', 'Navidad');
+
+-- 2024
+insert into holidays(holiday_date, holiday_name) values ('2024-01-01', 'Año Nuevo');
+insert into holidays(holiday_date, holiday_name) values ('2024-01-08', 'Día de los Reyes Magos');
+insert into holidays(holiday_date, holiday_name) values ('2024-03-25', 'Día de San José');
+insert into holidays(holiday_date, holiday_name) values ('2024-03-28', 'Jueves Santo (Semana Santa)');
+insert into holidays(holiday_date, holiday_name) values ('2024-03-29', 'Viernes Santo (Semana Santa)');
+insert into holidays(holiday_date, holiday_name) values ('2024-05-01', 'Día del Trabajo');
+insert into holidays(holiday_date, holiday_name) values ('2024-05-13', 'Día de la Ascencion');
+insert into holidays(holiday_date, holiday_name) values ('2024-06-03', 'Corpus Christi');
+insert into holidays(holiday_date, holiday_name) values ('2024-06-10', 'Sagrado Corazón');
+insert into holidays(holiday_date, holiday_name) values ('2024-07-01', 'San Pedro y San Pablo');
+insert into holidays(holiday_date, holiday_name) values ('2024-07-20', 'Día de la Independencia');
+insert into holidays(holiday_date, holiday_name) values ('2024-08-07', 'Batalla de Boyaca');
+insert into holidays(holiday_date, holiday_name) values ('2024-08-19', 'Día de la Ascensión');
+insert into holidays(holiday_date, holiday_name) values ('2024-10-14', 'Día de la raza');
+insert into holidays(holiday_date, holiday_name) values ('2024-11-04', 'Día de Todos los Santos');
+insert into holidays(holiday_date, holiday_name) values ('2024-11-11', 'Independencia de Cartagena');
+insert into holidays(holiday_date, holiday_name) values ('2024-12-08', 'Día de la Inmaculada Concepción');
+insert into holidays(holiday_date, holiday_name) values ('2024-12-25', 'Navidad');
