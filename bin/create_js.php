@@ -1,7 +1,7 @@
 <?php
 $db      = new SQLite3('./holidays');
 $now     = new DateTime(date('Y-m-d'));
-$query   = "SELECT * FROM holidays WHERE holiday_date LIKE '202%'";
+$query   = "SELECT * FROM holidays WHERE holiday_date LIKE '2023%' OR holiday_date LIKE '2024%' ";
 $results = $db->query($query);
 
 while ($row = $results->fetchArray()) {
@@ -51,7 +51,6 @@ Cal.prototype.isAHoliday = function(year, month, day) {
   }
 
   if (this.Holidays.includes(year + '-' + month + '-' + day)) {
-    console.log('foo');
     return true;
   }
 
@@ -63,10 +62,10 @@ Cal.prototype.isAHoliday = function(year, month, day) {
 Cal.prototype.nextMonth = function() {
   if ( this.currMonth == 11 ) {
     this.currMonth = 0;
-    if ( this.currYear == 2022 ) {
-      this.currYear = 2023;
+    if ( this.currYear == 2023 ) {
+      this.currYear = 2024;
     } else {
-      this.currYear = 2022;
+      this.currYear = 2023;
     }
   }
   else {
@@ -79,10 +78,10 @@ Cal.prototype.nextMonth = function() {
 Cal.prototype.previousMonth = function() {
   if ( this.currMonth == 0 ) {
     this.currMonth = 11;
-    if ( this.currYear == 2022 ) {
-      this.currYear = 2023;
+    if ( this.currYear == 2023 ) {
+      this.currYear = 2024;
     } else {
-      this.currYear = 2022;
+      this.currYear = 2023;
     }
   }
   else {

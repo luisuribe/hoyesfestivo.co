@@ -24,7 +24,7 @@ var Cal = function(divId) {
   this.currYear = d.getFullYear();
   this.currDay = d.getDate();
 
-  this.Holidays = ["2021-01-01","2021-01-11","2021-03-22","2021-04-01","2021-04-02","2021-05-01","2021-05-17","2021-06-07","2021-06-14","2021-07-05","2021-07-20","2021-08-07","2021-08-16","2021-10-18","2021-11-01","2021-11-15","2021-12-08","2021-12-25","2022-01-01","2022-01-10","2022-03-21","2022-04-14","2022-04-15","2022-05-01","2022-05-30","2022-06-20","2022-06-27","2022-07-04","2022-07-20","2022-08-07","2022-08-15","2022-10-17","2022-11-07","2022-11-14","2022-12-08","2022-12-25"];
+  this.Holidays = ["2023-01-01","2023-01-09","2023-03-20","2023-04-06","2023-04-07","2023-05-01","2023-05-22","2023-06-12","2023-06-19","2023-07-03","2023-07-20","2023-08-07","2023-08-21","2023-10-16","2023-11-06","2023-11-13","2023-12-08","2023-12-25","2024-01-01","2024-01-08","2024-03-25","2024-03-28","2024-03-29","2024-05-01","2024-05-13","2024-06-03","2024-06-10","2024-07-01","2024-07-20","2024-08-07","2024-08-19","2024-10-14","2024-11-04","2024-11-11","2024-12-08","2024-12-25"];
 
 };
 
@@ -39,7 +39,6 @@ Cal.prototype.isAHoliday = function(year, month, day) {
   }
 
   if (this.Holidays.includes(year + '-' + month + '-' + day)) {
-    console.log('foo');
     return true;
   }
 
@@ -51,10 +50,10 @@ Cal.prototype.isAHoliday = function(year, month, day) {
 Cal.prototype.nextMonth = function() {
   if ( this.currMonth == 11 ) {
     this.currMonth = 0;
-    if ( this.currYear == 2021 ) {
-      this.currYear = 2022;
+    if ( this.currYear == 2023 ) {
+      this.currYear = 2024;
     } else {
-      this.currYear = 2021;
+      this.currYear = 2023;
     }
   }
   else {
@@ -67,10 +66,10 @@ Cal.prototype.nextMonth = function() {
 Cal.prototype.previousMonth = function() {
   if ( this.currMonth == 0 ) {
     this.currMonth = 11;
-    if ( this.currYear == 2021 ) {
-      this.currYear = 2022;
+    if ( this.currYear == 2023 ) {
+      this.currYear = 2024;
     } else {
-      this.currYear = 2021;
+      this.currYear = 2023;
     }
   }
   else {
@@ -175,7 +174,7 @@ Cal.prototype.showMonth = function(y, m) {
 window.onload = function() {
 
   // Start calendar
-  var c = new Cal("divCal");            
+  var c = new Cal("divCal");
   c.showcurr();
 
   // Bind next and previous button clicks
